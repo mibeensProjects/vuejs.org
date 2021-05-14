@@ -1,17 +1,17 @@
 ---
-title: Components Basics
+title: Components 기초
 type: guide
 order: 11
 ---
 
-<div class="vueschool"><a href="https://vueschool.io/courses/vuejs-components-fundamentals?friend=vuejs" target="_blank" rel="sponsored noopener" title="Free Vue.js Components Fundamentals Course">Watch a free video course on Vue School</a></div>
+<div class="vueschool"><a href="https://vueschool.io/courses/vuejs-components-fundamentals?friend=vuejs" target="_blank" rel="sponsored noopener" title="Free Vue.js Components Fundamentals Course">Vue School의 비디오 시청하기</a></div>
 
-## Base Example
+## 기본 예제
 
-Here's an example of a Vue component:
+Vue 컴포넌트의 간단한 예제:
 
 ``` js
-// Define a new component called button-counter
+// button-counter 컴포넌트 정의하기
 Vue.component('button-counter', {
   data: function () {
     return {
@@ -22,7 +22,7 @@ Vue.component('button-counter', {
 })
 ```
 
-Components are reusable Vue instances with a name: in this case, `<button-counter>`. We can use this component as a custom element inside a root Vue instance created with `new Vue`:
+컴포넌트는 이름이 있는 재사용이 가능한 Vue의 인스턴스 이다. 이경우 `<button-counter>`이다. 우리는 `new Vue`를 이용하여 생성하는 루트 Vue 인스턴스 안에 커스텀 엘리먼트로서 이 컴포넌트를 사용할 수 있다.
 
 ```html
 <div id="components-demo">
@@ -51,11 +51,11 @@ new Vue({ el: '#components-demo' })
 </script>
 {% endraw %}
 
-Since components are reusable Vue instances, they accept the same options as `new Vue`, such as `data`, `computed`, `watch`, `methods`, and lifecycle hooks. The only exceptions are a few root-specific options like `el`.
+컴포넌트는 재 사용이 가능한 Vue의 인스턴이 이기때문에 `data`, `computed`, `watch`, `methods`, 그리고 lifecycle hooks 과 같은  `new Vue`에 사용하는 같은 옵션을 사용할 수 있다.  root에 특화된 `el`같은 소수의 옵션만을 사용할 수 없다.
 
-## Reusing Components
+## 컴포넌트의 재 사용
 
-Components can be reused as many times as you want:
+컴포넌트는 횟수에 상관없이 재 사용이 가능하다.
 
 ```html
 <div id="components-demo">
